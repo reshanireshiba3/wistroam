@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const services = [
@@ -16,7 +17,7 @@ const Home = () => {
           <h1 id="home-title">Technology with a human point of view.</h1>
           <p className="home-lead">We help businesses turn ideas into useful websites, applications, and digital systems that are clear, reliable, and ready to grow.</p>
           <div className="home-actions">
-            <a className="home-button" href="/contact-us">Start a project <span aria-hidden="true">↗</span></a>
+            <Link className="home-button" to="/contact-us">Start a project <span aria-hidden="true">↗</span></Link>
             <a className="home-text-link" href="#services-section">See what we do <span aria-hidden="true">↓</span></a>
           </div>
         </div>
@@ -41,12 +42,12 @@ const Home = () => {
         </div>
         <div className="service-list">
           {services.map((service) => (
-            <a className="service-item" href={service.path} key={service.number}>
+            <Link className="service-item" to={service.path} key={service.number}>
               <span className="service-number">{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
               <span className="service-arrow" aria-hidden="true">↗</span>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -54,7 +55,7 @@ const Home = () => {
       <section className="home-closing">
         <p className="home-kicker">Have a good problem?</p>
         <h2>Let&apos;s make something useful.</h2>
-        <a className="home-button" href="/contact-us">Talk to Wistroam <span aria-hidden="true">↗</span></a>
+        <Link className="home-button" to="/contact-us">Talk to Wistroam <span aria-hidden="true">↗</span></Link>
       </section>
     </div>
   );
