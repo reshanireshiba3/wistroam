@@ -1,0 +1,146 @@
+.slide-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7ff;
+  padding: 20px;
+}
+
+.slide-content {
+  width: 90%;
+  max-width: 700px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #494a4b;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+.main-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+}
+
+.slide-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+}
+
+/* Image */
+.slide-content img {
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.slide-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Animation */
+.slide-heading,
+.slide-content img {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .slide-content {
+    max-width: 600px;
+    min-height: 450px;
+    padding: 35px 20px;
+  }
+
+  .main-title {
+    font-size: 26px;
+  }
+
+  .slide-heading {
+    font-size: 22px;
+  }
+
+  .slide-content img {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-wrapper {
+    min-height: auto;
+    padding: 30px 15px;
+  }
+
+  .slide-content {
+    width: 100%;
+    max-width: 100%;
+    min-height: 400px;
+    padding: 30px 20px;
+  }
+
+  .main-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .slide-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .slide-content img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-wrapper {
+    padding: 20px 10px;
+  }
+
+  .slide-content {
+    min-height: 350px;
+    padding: 25px 15px;
+    border-radius: 16px;
+  }
+
+  .main-title {
+    font-size: 18px;
+  }
+
+  .slide-heading {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .slide-content img {
+    width: 200px;
+  }
+}

@@ -1,0 +1,103 @@
+.feedback-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feedback-page h1 {
+  color: tomato;
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.feedback-card {
+  background: tomato;
+  color: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  line-height: 1.8;
+  box-shadow: 0 4px 10px rgba(255, 99, 71, 0.3);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 99, 71, 0.4);
+}
+
+.feedback-card p {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.feedback-card strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .feedback-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .feedback-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback-page {
+    padding: 40px 15px;
+  }
+
+  .feedback-page h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .feedback-card {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  .feedback-card p {
+    font-size: 1rem;
+  }
+
+  .feedback-card strong {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-page {
+    padding: 30px 10px;
+  }
+
+  .feedback-page h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .feedback-card {
+    padding: 15px;
+    margin-bottom: 12px;
+  }
+
+  .feedback-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .feedback-card strong {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+}
